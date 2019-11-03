@@ -1,0 +1,47 @@
+<view class='out_box'>
+  <view class='nei_box'>
+    <view class='box_top'>
+      <view class='top_top'>
+        <view>提现到银行卡</view>
+        <image src='/images/dr_03.png'></image>
+      </view>
+      <view class='box_inps'>
+        <view class='inps_item'>
+          <view>持卡人姓名：</view>
+          <input type='text'></input>
+        </view>
+        <view class='inps_item'>
+          <view>银行卡账号</view>
+          <input type='text'></input>
+        </view>
+        <view class='inps_item'>
+          <view>所属银行</view>
+          <input type='text'></input>
+        </view>
+        <view class='inps_item'>
+          <view>手机号码</view>
+          <input type='text'></input>
+        </view>
+      </view>
+    </view>
+    <view class='bottom_box'>
+      <view class='top_top'>
+        <view>提现金额</view>
+      </view>
+      <view class='in_'>
+        <view>￥</view>
+        <input type='text'></input>
+      </view>
+      <view class='box_tips'>
+        我的余额￥430，<text>全部提现</text>
+      </view>
+      <view class='btn_'>提现</view>
+    </view>
+  </view>
+</view>
+<view class='zz' hidden='{{true}}'></view>
+<view class='tog_get' hidden='{{true}}'>
+    <view class='tog_tit'>选择到账方式</view>
+    <view class='tog_item'>提现到微信</view>
+    <view class='tog_item'>提现到银行卡</view>
+</view>

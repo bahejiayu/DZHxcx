@@ -1,0 +1,15 @@
+<view class='jo_container'>
+  <view class='jo_tit'>{{data_.title}}</view>
+  <view class='jo_content'>
+      <view>
+        {{data_.content}}
+      </view>
+      <view class='imgs'>
+          <image  wx:for='{{data_.pic}}' src='{{url+item}}' mode='widthFix'></image>
+      </view>
+  </view>
+  <view class='jo_time'>
+    {{data_.c_time}}
+  </view>
+
+</view>

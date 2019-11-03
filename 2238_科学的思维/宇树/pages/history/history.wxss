@@ -1,0 +1,46 @@
+page{
+  background-color: #f7f7f7;
+}
+.result_item{
+  border-top: 1px solid #dcdcdc; 
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+.result_item view:first-child{
+  font-size:30rpx ;
+  color: #333333;
+  float: left;
+}
+
+.result_item navigator{
+  float: right;
+  color: #c3c3c3;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 55rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

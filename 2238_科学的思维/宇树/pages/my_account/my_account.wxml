@@ -1,0 +1,35 @@
+<view class='acc_top'>
+  <view>我的余额：<text>￥{{data_list.top.balance||0}}</text></view>
+  <view bindtap='go_get'>提现</view>
+</view>
+<view class='acc_top'>
+  <view>预计佣金：<text>￥{{data_list.top.commision||0}}</text></view>
+  <view></view>
+</view>
+
+
+<view class='acc_head'>明细</view>
+<view class='acc_list'>
+  <view class='acc_item' wx:for='{{data_list.data}}'>
+    <view class='acc_none'>
+      <view>{{item.payment==2?"收入":"支出"}}</view>
+      <view>{{item.c_time}}</view>
+    </view>
+    <view class='acc_two'>
+      <view>{{item.payment==2?"+":"-"}}￥{{item.price}}</view>
+      <view>{{item.des}}</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<view class='kong_' wx:if="{{data_list.data.length<=0}}" >
+  <image src='../../images/kong.png'></image>
+  <view>您还没有相关的交易记录</view>
+</view>
+
+<view class='cheng'></view>
+<!-- <navigator class='fix_btn' bindtap='sub_mit' url='../get_now/get_now'>提现</navigator> -->

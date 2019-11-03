@@ -1,0 +1,4 @@
+<view class='pz_c'>
+  <rich-text nodes="{{txt_html}}"></rich-text>
+
+</view>

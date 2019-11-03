@@ -1,0 +1,41 @@
+<view class='index_box'>
+  <view class='index_item'>
+    <navigator>
+      <view class='index_left'>
+        <image src='{{url+data_.pic}}'></image>
+      </view>
+      <view class='index_right'>
+        <view class='goods_tit'>
+          {{data_.title}}
+        </view>
+        <view class='goods_info'>
+          <view>地点：{{data_.you_addr}}</view>
+        </view>
+        <view class='goods_price'>￥{{data_.total}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='record_tit'>
+  消费记录单
+
+</view>
+ <view class='kong_' wx:if='{{data_.record.length<=0}}'>
+      <image src='../../images/kong.png'></image>
+      <view>您还没有相关的消费记录</view>
+  </view>
+
+
+<view class='record_list' wx:if='{{data_.record.length>0}}'>
+  <view class='record_item'>
+    <view>项目</view>
+    <text></text>
+    <view>费用</view>
+  </view>
+  <view class='record_item' wx:for='{{data_.record}}'>
+    <view>{{item.name}}</view>
+    <text></text>
+    <view class='yel'>￥{{item.price}}</view>
+  </view>
+</view>

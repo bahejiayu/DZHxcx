@@ -1,0 +1,45 @@
+<view class='index_box'>
+  <view class='order_item' wx:for='{{list_}}'>
+    <view class='index_top'>
+      <view>
+        <image src='{{item.array.headimage}}'></image>
+        {{item.array.name}}
+      </view>
+      <view>
+        佣金：<text>￥{{item.price}}</text>
+      </view>
+    </view>
+    <view class='index_item'>
+      <navigator hover-class='none'>
+        <view class='index_left'>
+          <image src='{{url+item.array.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.array.title}}
+          </view>
+          <view class='goods_info'>
+            <view wx:if='{{item.array.type==6}}'>{{item.array.u_label}}</view>
+            <view wx:if='{{item.array.type==6}}'>地点：{{item.array.you_addr}}</view>
+            <view wx:if='{{item.array.type==5}}'>地点：{{item.array.you_addr}}</view>
+            <view wx:if='{{item.array.type==4}}'>{{item.array.meal}}</view>
+            <view wx:if='{{item.array.type==4}}'>{{item.array.u_label}}</view>
+            <view wx:if='{{item.array.type==2}}'>{{item.array.u_label}}</view>
+            <view wx:if='{{item.array.type==1}}'>{{item.array.u_label}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.array.total}}</view>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+</view>
+
+
+
+
+
+ <view class='kong_' wx:if="{{list_.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>您还没有相关的订单</view>
+  </view>

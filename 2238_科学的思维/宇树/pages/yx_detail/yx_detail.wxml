@@ -1,0 +1,76 @@
+<view class='banner'>
+  <swiper autoplay='{{true}}' indicator-dots='{{true}}' indicator-color='rgba(255,255,255,.4)' indicator-active-color='#fff'>
+    <swiper-item wx:for='{{data_.imgs}}'>
+      <image src='{{url+item}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class='goods_top'>
+  <view class='goods_tit'>{{data_.title}}</view>
+    <view class='info_item'>
+    地点 : {{data_.address}}
+  </view>
+  <view class='info_item'>
+    {{data_.peoplenum}}
+  </view>
+  <view class='goods_price'>￥{{data_.price}}</view>
+
+  <view class='fu'>
+    <view class='fu_item' bindtap='tog_sc'>
+      <button hover-class="none">
+        <image src='{{is_sc==true?"/images/starl_03.png":"/images/starx_03.png"}}'></image>
+        <view>收藏</view>
+      </button>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+<view class='goods_nav'>
+  <view class='goods_nav_item {{type_==1?"cur":""}}' data-type='1' bindtap='tog_type'>课程简介</view>
+  <view class='goods_nav_item {{type_==2?"cur":""}}' data-type='2'  bindtap='tog_type'>评价</view>
+</view>
+<view class='html_txt' wx:if='{{type_==1}}'>
+    <rich-text nodes='{{data_.desc}}'></rich-text>
+
+</view>
+
+<view wx:if='{{type_==2}}'>
+  <view class='eval_box' wx:if='{{ev_list.length>0}}'>
+    <view class='eval_list' wx:for='{{ev_list}}'>
+      <view class='eval_top'>
+        <view class='ev_top_left'>
+          <view class='ev_img'>
+            <image src='{{item.headimage}}'></image>
+          </view>
+          <view class='ev_txt'>
+            <view class='ev_name'>{{item.name||item.nickname}}</view>
+            <view class='ev_start'>
+            </view>
+          </view>
+        </view>
+        <view class='right_deta'>{{item.c_time}}</view>
+      </view>
+      <view class='ev_content'>
+        {{item.content}}
+      </view>
+    </view>
+  </view>
+  <view class='no_ev' wx:if='{{ev_list.length<=0}}'>
+    还没有相关的评论...
+  </view>
+</view>
+
+
+<view class='cheng'></view>
+<view class='fix_btn'>
+  <view bindtap='buy_'>立即购买</view>
+  <view bindtap='add_car'>加入购物车</view>
+</view>

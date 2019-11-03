@@ -1,0 +1,42 @@
+<view class='form_box'>
+  <view class='form_item'>
+    <view class='form-tit'>姓名</view>
+    <view class='inp_container'>
+      <input type='text' placeholder='请输入您的姓名' bindinput='get_name' value='{{name_}}'>
+      </input>
+    </view>
+  </view>
+
+  <view class='form_item'>
+    <view class='form-tit'>年龄</view>
+    <view class='inp_container'>
+      <input type='number' placeholder='请输入您的年龄' bindinput='get_age' value='{{age_}}'>
+      </input>
+    </view>
+  </view>
+  <view class='form_item ' >
+    <view class='form-tit'>年龄</view>
+    <view class='inp_container bkh'>
+      <view class='lable_item' bindtap='tog_sex' data-sex='1'>
+        <view class='wai_ {{sex_==1?"cur":""}}' data-sex='1'>
+          <view class='guo_' data-index="{{index}}" data-sex='1'></view>
+        </view>
+        <text data-sex='1'>男</text>
+
+      </view>
+       <view class='lable_item' bindtap='tog_sex' data-sex='2'>
+        <view class='wai_ {{sex_==2?"cur":""}}' data-sex='2'>
+          <view class='guo_' data-index="{{index}}" data-sex='2'></view>
+        </view>
+        <text data-sex='2'>女</text>
+
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<view class='fix_btn' bindtap='sub_mit'>
+进入测试
+</view>

@@ -1,0 +1,55 @@
+<view class='index_box'>
+  <view class='index_item'>
+    <navigator>
+      <view class='index_left'>
+        <image src='{{url+all_data.top.pic}}'></image>
+      </view>
+      <view class='index_right'>
+        <view class='goods_tit'>
+          {{all_data.top.title}}
+        </view>
+        <view class='goods_info'>
+
+        </view>
+        <!-- <view class='goods_price'>￥98</view> -->
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+<view class='que_txt'>
+  <!-- <view>
+    <text>情境：</text> 用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉，并沿桌子表面向四周扩散。</view>
+  <view>
+    <text>问题：</text> 正常的烟气都是上升，为什么冷冻的烟气会下沉？下沉的烟气为什么会向四周扩散？</view>-->
+      <rich-text nodes='{{all_data.data.question}}'></rich-text>
+    
+</view>
+  
+
+
+
+
+<view class='area_txt'>
+  <textarea placeholder='请输入您的答案' bindinput='get_area'></textarea>
+</view>
+
+
+
+<view class='up_tit'>上传图片</view>
+<view class='con'>
+
+<view class='list_img'>
+  <image wx:for='{{hand_card}}' src='{{url+"/"+item}}'>
+    <view data-index='{{index}}' bindtap='del_card'>删除</view>
+  </image>
+</view>
+<view>
+  <image src='/images/baiban_03.jpg' bindtap='up_card'></image>
+</view>
+</view>
+
+<view class='cheng'></view>
+
+<view class='fix_btn' bindtap='sub_mit'>提交</view>

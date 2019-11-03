@@ -1,0 +1,27 @@
+<view class='tit_'>姓名</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入您的姓名' bindinput='get_name'></input>
+</view>
+
+<view class='tit_'>年龄</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入您的年龄' bindinput='get_name'></input>
+</view>
+
+<view class='tit_'>职业</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入您的职业' bindinput='get_name'></input>
+</view>
+<view class='tit_'>学历</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入您的学历' bindinput='get_name'></input>
+</view>
+<view class='tit_'>手机号码</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入手机号码' bindinput='get_name'></input>
+</view>
+
+<view class='cheng'></view>
+
+
+<view class='fix_btn'>发布</view>

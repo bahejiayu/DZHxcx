@@ -1,0 +1,130 @@
+<view class='tjt_top'>
+  <view class='wei_top'>{{data_.data.name}},恭喜您成为第{{data_.paixu}}位测评者</view>
+  <view class='yuan'>
+    <view class='big_yuan'></view>
+    <view class='er_yuan'></view>
+    <view class='small_yuan'>
+      {{data_.mean}}
+      <text>分</text>
+    </view>
+    <!-- <canvas canvas-id="myCanvas" style="width:200px;height:200px;"></canvas> -->
+  </view>
+</view>
+<!--通过canvas-id引入canvas-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class='result_box'>
+  <view>
+    <image src='/images/retop_02.jpg' mode='widthFix'></image>
+  </view>
+  <view class='res_content'>
+    <view class='res_box'>
+      <view class='res_tit'>
+        <text>{{data_.data.type}}型</text> 测试类型
+      </view>
+      <view class='res_txt'>
+        {{data_.data.desc}}
+      </view>
+    </view>
+  </view>
+  <view class='b_div'>
+    <view class='zf'>
+      <button open-type='share' hover-class="none">
+        <image src='/images/zf_03.png'></image>
+        把测评结果分享给好友
+      </button>
+    </view>
+    <image src='/images/di_04.jpg' mode='widthFix' class='b_img'>
+    </image>
+  </view>
+</view>
+
+<view class='code_ma_box'>
+  邀朋友扫码也来测试
+  <image src='/images/dzs_03.png' class='dzs'></image>
+  <image src='{{ma_}}' class='code_ma' bindtap='look_code'></image>
+</view>
+<!-- wx:if='{{is_fx}}' -->
+<view class='save_img' bindtap='save_img'>
+  截图保存本次测评结果
+</view>
+
+<view class='btns_res'>
+  <image src='/images/btns1_07.jpg' bindtap='go_index'></image>
+  <image src='/images/btns2_07.jpg' bindtap='go_index'></image>
+</view>
+<!-- wx:if='{{is_fx}}' -->
+<view class='pl_box'>
+  <textarea placeholder='{{show_box==true?"":"请输入对测试结果的评论"}}' bindinput='get_area'></textarea>
+  <view class='sub_pl' bindtap='sub_mit'>发布评论</view>
+</view>
+
+
+<!-- wx:if='{{is_fx}}' -->
+<view class='eval_box'>
+  <view class='eval_list' wx:for='{{pl_list}}'>
+    <view class='eval_top'>
+      <view class='ev_top_left'>
+        <view class='ev_img'>
+          <image src='{{item.headimage}}'></image>
+        </view>
+        <view class='ev_txt'>
+          <view class='ev_name'>{{item.name!=''?item.name:item.nickname}}</view>
+          <view class='ev_start'>
+
+
+          </view>
+        </view>
+      </view>
+      <view class='right_deta'>{{item.time_}}</view>
+    </view>
+    <view class='ev_content'>
+      {{item.content}}
+    </view>
+
+
+  </view>
+
+
+
+  <view class='kong_'  wx:if="{{pl_list.length<=0}}">
+    <image src='../../images/kong.png'></image>
+    <view>还没有任何评论 , 赶紧添加吧 !</view>
+  </view>
+
+</view>
+
+<view class='toast_' wx:if='{{show_fx}}'>
+  <view>测试结果已生成图片保存本地</view>
+  <view>赶紧分享吧!</view>
+</view>
+
+
+<view class='zz' wx:if="{{show_box}}"></view>
+<view class=' hy ' wx:if="{{show_box}}">
+  <view class='hy_tit'>提示</view>
+  <view class='hy_content '>
+    <rich-text nodes='{{txt_html}} '></rich-text>
+    <view style='text-align:center;'>
+      详情请扫码关注公众号
+      <view>
+        <image src='{{gzh}}' bindtap='loo_gzh'></image>
+      </view>
+    </view>
+  </view>
+  <view class='hy_bnt ' bindtap='hy_btn'>
+    我明白了
+  </view>
+</view>

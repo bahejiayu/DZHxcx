@@ -1,0 +1,22 @@
+<view class='mes_tit'> 
+{{data_info.title}}
+</view>
+<view class='mes_content'>
+<rich-text  nodes='{{data_info.content}}'></rich-text>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

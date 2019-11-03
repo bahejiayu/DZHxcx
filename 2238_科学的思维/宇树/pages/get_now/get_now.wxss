@@ -1,0 +1,127 @@
+page{
+  border-top: 1px solid #dcdcdc;
+  background-color: #f7f7f7;
+}
+.out_box{
+  padding: 30rpx 25rpx;
+}
+.nei_box{
+  background-color: #fff;
+}
+.box_top{
+  padding: 60rpx 50rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.top_top{
+  font-size: 30rpx;
+  overflow: hidden;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+
+.top_top image{
+  width:10rpx ;
+  position: absolute;
+  /* right: 0; */
+  right:0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 17rpx;
+  vertical-align: middle;
+}
+.inps_item{
+  position: relative;
+  padding-left: 175rpx;
+}
+.inps_item view{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 30rpx;
+}
+.inps_item input{
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+  vertical-align: middle;
+}
+.inps_item{
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+.bottom_box{
+  padding: 50rpx;
+}
+
+
+.in_ input{
+   border-bottom: 1px solid #dcdcdc;
+  font-size: 60rpx;
+  height: 100rpx;
+  font-weight: bold;
+  padding-left: 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+  margin-top: 10px;
+  vertical-align: middle;
+}
+.in_{
+  position: relative;
+  margin-top: 30rpx;
+  
+}
+.in_ view{
+  font-weight: bold;
+  font-size: 60rpx;
+  position: absolute;
+  left: 0;  
+  top: -10rpx;
+}
+.box_tips{
+  font-size: 26rpx;
+  color: #828282;
+  margin: 30rpx 0 50rpx 0;
+}
+.box_tips text{
+  color: #febd00;
+}
+.btn_{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #febd00;
+  border-radius: 10rpx;
+}
+.tog_get{
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+}
+.tog_tit{
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.tog_item{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 25rpx;
+  border-top: 1px solid #dcdcdc;
+  font-size: 30rpx;
+}
+
+
+
+
+
+
+
+
+
+

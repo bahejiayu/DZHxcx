@@ -1,0 +1,202 @@
+// pages/work/work.js
+var app = getApp();
+var http = app.globalData.http;
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+      all_data:{},
+      url:http,
+      area:'',
+    hand_card:[],
+    id_:""
+  },
+  del_card: function (e) {
+    var index_ = e.target.dataset.index;
+    var del_list = this.data.hand_card;
+    del_list.splice(index_, 1);
+    this.setData({
+      hand_card: del_list
+    });
+
+  },
+  sub_mit:function(){
+      var that=this;
+    if (that.data.area==''){
+        wx.showToast({
+          title: '请输入您的答案',
+          icon:'none'
+        });
+        return false;
+      }
+    wx.showLoading({
+      title: '提交中',
+    });
+    wx.request({
+      url: http +'/api/user/homeword_sub', //仅为示例，并非真实的接口地址
+      data: {
+        id:that.data.id_,
+        pic: that.data.hand_card,
+        answer: that.data.area
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        wx.hideLoading();
+        console.log(res.data);
+        if(res.data.code==1){
+              wx.showToast({
+                title: '提交成功',
+              });
+              setTimeout(function(){
+                    wx.navigateBack({
+                      delta:1
+                    });
+
+              },1500);
+        }
+
+
+      }
+    })
+
+
+  },
+  up_card: function () {
+    var that = this;
+    // if (that.data.hand_card.length > 3) {
+    //   wx.showToast({
+    //     title: '不能重复上传',
+    //     icon: 'none'
+    //   });
+    //   return false;
+    // };
+    wx.chooseImage({
+      count: 1, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths[0];
+        console.log(tempFilePaths)
+        wx.showLoading({
+          title: '上传中',
+        })
+        wx.uploadFile({
+          url: http + '/api/user/upload_image', //仅为示例，非真实的接口地址
+          filePath: tempFilePaths,
+          name: 'image',
+          method: "POST",
+          success: function (res) {
+            wx.hideLoading();
+            console.log(res.data)
+            console.log(JSON.parse(res.data));
+            var data_ = JSON.parse(res.data);
+            if (data_.code == 1) {
+              var list_img_up = that.data.hand_card;
+              list_img_up.push(data_.data.image_name);
+              that.setData({
+                hand_card: list_img_up
+              })
+
+            } else {
+              wx.showToast({
+                title: '上传失败',
+                icon: 'none'
+              })
+            }
+          }
+        })
+      }
+    })
+  },
+  get_area:function(e){
+      this.setData({
+        area:e.detail.value
+      });
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+        // 1
+        wx.showLoading({
+          title: '加载中',
+        });
+        this.setData({
+          id_: options.id
+        });
+    var that=this;
+    wx.request({
+      url: http +'/api/user/homeword_info', //仅为示例，并非真实的接口地址
+      data: {
+        id: options.id,
+        gid: options.gid
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        wx.hideLoading();
+        if(res.data.code==1){
+              that.setData({
+                all_data:res.data
+              });
+        };
+        console.log(res.data);
+      }
+    });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

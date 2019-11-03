@@ -1,0 +1,17 @@
+<view class='result_list'>
+  <view class='result_item' wx:if='{{record_id!="false"}}'>
+    <view>免费测评</view>
+    <navigator url='../result/result?record_id={{record_id}}&r=1'>查看结果</navigator>
+  </view>
+  <view class='result_item' wx:for='{{result_list}}' wx:key='{{index}}'>
+    <view>{{item.test_type}}</view>
+    <navigator wx:if='{{item.isanswer==2&&item.correct==2}}' url='../information/information?id={{item.id}}'>开始答题</navigator>
+    <navigator wx:if='{{item.isanswer==1&&item.correct==1}}' url='../result_card/result_card?id={{item.id}}'>查看结果</navigator>
+    <navigator wx:if='{{item.isanswer==1&&item.correct==2}}'>批改中</navigator>
+  </view>
+</view>
+
+<view class='kong_' wx:if="{{result_list.length<=0&&record_id=='false'}}">
+  <image src='../../images/kong.png'></image>
+  <view>您还没有相关的评测</view>
+</view>

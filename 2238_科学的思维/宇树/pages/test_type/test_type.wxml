@@ -1,0 +1,19 @@
+<view class='test_list'>
+  <view class='test_item' wx:for='{{type_list}}'>
+    <navigator url='{{item.price!=null?"":"../info/info"}}' data-id='{{index}}'  bindtap='{{item.price!=null?"go_teacher":""}}'>
+      <view class='test_container cur' data-id='{{index}}'>
+        <view class='test1' data-id='{{index}}'>{{item.title}} ({{item.price!=null?"收费":"免费"}})</view>
+        <!-- <view class='test2'>¥1</view> -->
+      </view>
+    </navigator>
+  </view>
+
+
+</view>
+
+<view class='cheng'></view>
+
+
+<view class='fix_btn' bindtap='next_'>
+  测评记录
+</view>

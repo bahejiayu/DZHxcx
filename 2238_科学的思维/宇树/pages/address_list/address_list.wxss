@@ -1,0 +1,76 @@
+.address_list {
+  background-color: #fff;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+
+page {
+  background-color: #f7f7f7;
+  color: #333;
+  border-top: 1px solid #dcdcdc;
+}
+
+.address_item {
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #fff;
+}
+.ad_name text{
+  display: none;
+}
+.cur .ad_name text{
+  display: inline-block;
+}
+.item_container {
+  padding: 0 100rpx 0 0rpx;
+  position: relative;
+}
+
+.item_container.cur {
+  padding-left: 50rpx;
+}
+
+.ad_name {
+  float: left;
+}
+
+.ad_name text {
+  color: #9d2427;
+}
+
+.ad_phone {
+  float: right;
+}
+.top_{
+  margin-bottom: 15rpx;
+  overflow: hidden;
+}
+.dz_ico{
+  display: none;
+  width:26rpx ;
+  height:36rpx ;
+  position: absolute;
+  left: 0rpx;
+  top:50%;
+  transform: translateY(-50%);
+}
+.cur .dz_ico{
+  display: block;
+}
+.bj_{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bj_ text{
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+text-align: right;
+padding-left: 15rpx;
+border-left: 1px solid #333333;  
+}
+.address_list{
+  margin-bottom: 100rpx;
+}

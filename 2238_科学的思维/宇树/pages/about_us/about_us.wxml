@@ -1,0 +1,45 @@
+<view class='us_banner'>
+    <image src='{{url+data_.pic}}' mode='widthFix'></image>
+</view>
+
+<view>
+    <view class='us_tit'>企业介绍1111</view>
+    <view class='us_des'>
+        <rich-text nodes='{{data_.content}}'></rich-text>
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

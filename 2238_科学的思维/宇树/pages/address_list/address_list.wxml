@@ -1,0 +1,29 @@
+<view class='address_list'>
+  <view class='address_item' wx:for='{{address_list}}'>
+    <view class='item_container  {{item.default==1?"cur":""}} '>
+      <image src='../../images/ad_ico_03.png' class='dz_ico'></image>
+      <view class='top_'>
+        <view class='ad_name'>
+          收货人：{{item.name}}
+          <text>[默认]</text>
+        </view>
+        <view class='ad_phone'>{{item.mobile}}</view>
+      </view>
+      <view class='add_info'>收货地址：{{item.province}} {{item.address}}</view>
+      <view class='bj_'>
+          <navigator url='../editor_address/editor_address?id={{item.id}}' hover-class="none"><text>编辑</text></navigator>
+        </view>
+    </view>
+  </view>
+</view>
+
+
+
+ <view class='kong_' wx:if="{{address_list.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>您还没有相关的地址</view>
+  </view>
+
+
+
+<navigator class='fix_btn' url='../add_address/add_address' hover-class="none">添加地址</navigator>

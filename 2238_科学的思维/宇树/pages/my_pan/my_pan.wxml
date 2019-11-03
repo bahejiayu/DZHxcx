@@ -1,0 +1,60 @@
+<view class='top_nav'>
+  <view class='{{cur_txt=="全部"?"cur":""}}' data-cur='全部' bindtap='tog_order'>
+    全部
+    <view class='kuai' data-cur='全部'></view>
+  </view>
+  <view class='{{cur_txt=="待支付"?"cur":""}}' data-cur='待支付' bindtap='tog_order'>待支付
+    <view class='kuai' data-cur='待支付'></view>
+  </view>
+  <view class='{{cur_txt=="待验证"?"cur":""}}' data-cur='待验证' bindtap='tog_order'>待验证
+    <view class='kuai' data-cur='待验证'></view>
+  </view>
+  <view class='{{cur_txt=="已完成"?"cur":""}}' data-cur='已完成' bindtap='tog_order'>已完成
+    <view class='kuai' data-cur='已完成'></view>
+  </view>
+</view>
+
+
+<view class='order_box'>
+  <view class='order_item' wx:for='{{order_List}}'>
+    <view class='order_head'>
+      <view wx:if='{{item.status==1}}'>待支付</view>
+      <view wx:if='{{item.status==2&&item.isuse==2}}'>待验证</view>
+      <view wx:if='{{item.status==2&&item.isuse==1}}'>已完成</view>
+      <view>
+        <text>订金：</text>￥{{item.total}}</view>
+    </view>
+    <view class='index_item'>
+      <navigator hover-class='none' url='../sha_detail/sha_detail?id={{item.gid}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>{{item.meal}} {{item.u_label}}</view>
+          </view>
+          <!-- <view class='goods_price'>￥98</view> -->
+        </view>
+      </navigator>
+    </view>
+    <view class='order_foot'>
+      <navigator class='an' wx:if='{{item.status==1}}' data-id='{{item.id}}' bindtap='del_order'>取消订单</navigator>
+      <navigator wx:if='{{item.status==1}}' data-id='{{t1.id}}' bindtap='pay_' >立即支付</navigator>
+      <navigator url='../loo_code/loo_code?id={{item.id}}' wx:if='{{item.status==2&&item.isuse==2}}'>查看二维码</navigator>
+      <navigator url='../annotation/annotation?id={{item.id}}' wx:if='{{item.status==2&&item.isuse==1}}'>批注</navigator>
+      <navigator url='../evaluate/evaluate?id={{item.id}}&gid={{item.gid}}' wx:if='{{item.status==2&&item.isuse==1}}'>评价</navigator>
+      <navigator url='../work_list/work_list?id={{item.id}}' wx:if='{{item.status==2&&item.isuse==1}}'>线上作业</navigator>
+    </view>
+  </view>
+
+
+
+</view>
+
+<view class='kong_' wx:if="{{order_List.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>您还没有相关的订单</view>
+  </view>

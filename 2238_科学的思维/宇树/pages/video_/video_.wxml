@@ -1,0 +1,3 @@
+<video src='{{url+src_}}' autoplay='{{true}}' style='height:{{winHeight}}px;'>
+
+</video>

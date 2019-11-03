@@ -1,0 +1,163 @@
+page{
+  background-color: #f7f7f7;
+  border-top: 1px solid #dcdcdc;
+}
+.top_nav{
+  /* padding: 0 25rpx; */
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #333333;
+  white-space: nowrap;
+  background-color: #fff;
+  margin-bottom: 14rpx;
+}
+.top_nav>view{
+  /* margin-right: 50rpx; */
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+.top_nav>view.cur{
+    color: #febd00;
+}
+.top_nav>view.cur .kuai{
+  display: block;
+}
+.top_nav view:last-child{
+  margin: none;
+}
+.kuai{
+  width:14rpx ;
+  height: 14rpx;
+  background-color: #febd00;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-100%);
+  display: none;
+}
+.order_box{
+  margin-top: 30rpx;
+}
+.order_item{
+  background-color: #fff;
+  margin-bottom: 25rpx;
+}
+.order_head{
+  padding: 0 25rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.order_head view:first-child{
+  font-size: 28rpx;
+  color: #febd00;
+  float: left;
+}
+.order_head view:last-child{
+  font-size: 28rpx;
+  float: right;
+  color: #febd00;
+}
+.order_head text{
+  color: #333333;
+}
+.index_item{
+    padding: 20rpx 25rpx;
+    padding-left: 250rpx;
+    position: relative;
+    height: 200rpx;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.index_left{
+  width:200rpx ;
+  height: 200rpx;
+  position: absolute;
+  left: 25rpx;
+  top: 20rpx;
+}
+.index_left image{
+  width: 100%;
+  height: 100%;
+}
+.goods_tit{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+
+.goods_info{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #828282;
+}
+.goods_info view{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.goods_info view:first-child{
+  margin-bottom: 9rpx;
+}
+.index_right{
+  height: 100%;
+  position: relative;
+}
+.goods_price{
+  font-size:36rpx ;
+  color: #febd00;
+  bottom: 0;
+  position: absolute;
+}
+.index_item navigator{
+  height: 100%;
+  display: block;
+}
+.order_foot{
+  padding: 23rpx 25rpx;
+  text-align: right;
+}
+.order_foot navigator{
+  display: inline-block;
+  width: 155rpx;
+  height:55rpx;
+  text-align: center;
+  line-height: 55rpx;
+  font-size: 24rpx; 
+  border-radius: 6rpx;
+  border: 2rpx solid #febd00;
+  color: #febd00;
+  margin-left: 30rpx;
+}
+.order_foot navigator.an{
+ 
+  border: 2rpx solid #828282;
+  color: #828282;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

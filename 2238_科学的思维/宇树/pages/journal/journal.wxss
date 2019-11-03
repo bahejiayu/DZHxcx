@@ -1,0 +1,30 @@
+page{
+  border-top: 1px solid #dcdcdc;
+  background-color: #f7f7f7;
+}
+.jo_item{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #fff;
+  padding:  0 25rpx;
+  padding-right: 40rpx;
+  position: relative;
+  font-size: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jo_item image{
+  width: 10rpx;
+  height: 17rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25rpx;
+}
+.jo_item navigator{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+}

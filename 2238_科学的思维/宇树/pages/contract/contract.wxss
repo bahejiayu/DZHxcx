@@ -1,0 +1,76 @@
+page{
+  border-top: 1px solid #dcdcdc;
+}
+.ht_box{
+  padding: 45rpx 25rpx;
+}
+.ht_item{
+  position: relative;
+  padding-left: 90rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.ht_tit{
+  position: absolute;
+  left: 0;
+
+}
+.ht_item input{
+  width: 100;
+  border: none;
+  border-bottom: 2rpx solid #333333; 
+  box-sizing: border-box;
+}
+.mt20{
+  margin-top: 40rpx;
+}
+
+.all_txt{
+  font-size:30rpx ;
+  color:#333333; 
+}
+.all_txt view{
+  position: relative;
+  line-height: 40rpx;
+  padding-left: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+
+.all_txt text{
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.all_txt{
+  margin-top: 50rpx;
+}
+view{
+  font-size:30rpx ;
+  color:#333333; 
+}
+.bottom_con{
+  margin-top: 40rpx;
+}
+.mt20{
+  margin-top: 20rpx;
+}
+
+.b_top{
+  margin-bottom: 70rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

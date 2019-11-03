@@ -1,0 +1,39 @@
+.tit_{
+  padding: 0 25rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 28rpx;
+  color: #828282;
+}
+page{
+  background-color: #f7f7f7;
+}
+.inp_{
+  padding:0 25rpx ;
+  background-color: #fff;
+  height: 80rpx;
+}
+.inp_ input{
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+}
+textarea{
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 25rpx;
+  font-size: 28rpx;
+}
+image{
+  width: 225rpx;
+  margin-left: 25rpx;
+  height:225rpx ;
+}
+.apply_tip{
+  padding: 0 25rpx;
+  font-size:28rpx ;
+  color:#828282 ;
+  margin-top: 45rpx;
+}

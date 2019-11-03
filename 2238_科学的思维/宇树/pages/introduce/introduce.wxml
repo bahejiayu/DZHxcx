@@ -1,0 +1,13 @@
+<view class='txt_container'>
+
+<rich-text nodes='{{txt_}}'></rich-text>
+
+</view>
+
+    <view class='cheng'></view>
+  <button open-type='getUserInfo' bindgetuserinfo="login_" wx:if='{{is_login==false}}'>
+    <view class='btn_'>下一步</view>
+  </button>
+  <button bindtap='go_next' wx:if='{{is_login!=false}}'>
+    <view class='btn_'>下一步</view>
+  </button>

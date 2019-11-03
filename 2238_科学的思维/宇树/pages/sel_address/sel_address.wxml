@@ -1,0 +1,25 @@
+<view class='add_container'>
+  <view class='add_list' wx:for='{{address_list}}'  bindtap='sel_' data-id='{{item.id}}'>
+    <view class='add_left'  data-id='{{item.id}}'>
+      <view class='top_' data-id='{{item.id}}'>
+        <view class='ad_name' data-id='{{item.id}}'>
+          收货人：{{item.name}}
+          <!-- <text >[默认]</text> -->
+        </view>
+        <view class='ad_phone' data-id='{{item.id}}'>{{item.mobile}}</view>
+      </view>
+      <view class='add_info' data-id='{{item.id}}'>收货地址：{{item.province}}{{item.address}}</view>
+    </view>
+    <image src='../../images/cur__03.png'  wx:if='{{item.default==1}}' data-id='{{item.id}}'></image>
+  </view>
+</view>
+
+ <!-- <view class='kong_' wx:if="{{address_data.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>您还没有添加地址</view>
+  </view> -->
+
+
+
+
+<navigator hover-class="none" url='../address_list/address_list' class='fixed_bottom'>管理</navigator>

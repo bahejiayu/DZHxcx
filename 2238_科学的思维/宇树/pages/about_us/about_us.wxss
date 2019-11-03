@@ -1,0 +1,53 @@
+.us_banner image{
+  width: 100%;
+}
+page{
+  background-color: #f7f7f7;
+}
+.us_tit{
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #333333;
+}
+.us_des{
+  font-size: 26rpx;
+  color: #828282;
+  padding: 0 25rpx 25rpx 25rpx;
+  text-indent: 2rem;
+  line-height:41rpx ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

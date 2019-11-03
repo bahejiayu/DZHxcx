@@ -1,0 +1,42 @@
+<view id='container_{{index_}}'>
+  <view class='ques_top' id='test'>
+    <image src='/images/gth_03.jpg'></image> 请根据您的第一感觉，滑动选择符合自己的分数！</view>
+  <view class='ge'></view>
+  <view class='quse_box'>
+    <view class='quse_tit' bindtap='get_height'>{{all_list[index_].title}}</view>
+    <view class='quse_img'>
+      <image src='{{url+img_url}}' ></image>
+    </view>
+    <view class='quse_des'>
+      {{all_list[index_].content}}
+    </view>
+    <view class='pro_container'>
+      <view class='pro_z'>
+        <view class='pro'>
+          <progress percent="{{left_}}" show-info='{{false}}' catchtouchstart='start_' stroke-width="13" activeColor='#db7ffc' backgroundColor='#f7f7f7' />
+        </view>
+        <view class='tuo  {{left_>50?"dy":""}}' style='left:{{left_<0?0:left_}}%' catchtouchstart='start_' catchtouchmove='move_' catchtouchend='end_'>
+          <view class='de_'>
+            {{left_
+            <0? "0":left_}}分 </view>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+
+
+
+    <image src='/images/huakuai.png' class='gun' style='top:{{scroll_}}%; ' wx:if='{{show_gun}}'></image>
+
+    <view class='cheng'></view>
+
+
+
+  </view>
+
+
+  <view class='fix_btn' bindtap='next_'>
+    下一题
+  </view>

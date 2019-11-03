@@ -1,0 +1,51 @@
+<view class='top_txt'>
+  <text wx:if='{{top_tip=="点击开始答题"}}' bindtap='j_time'>{{top_tip}}</text>
+  <view wx:if='{{top_tip!="点击开始答题"}}'>{{top_tip}}</view>
+</view>
+<view class='test_box'>
+  <view class='test_item' wx:for='{{test_list}}' wx:key='{{index}}'>
+    <text>{{index+1}}.</text>
+    <view class='chk_list' catchtap='an_btn' data-index='{{index}}' data-txt='A'>
+      <view class='chk_item' data-index='{{index}}' data-txt='A'>
+        <view class='quan_ {{item==index+"A"?"cur":""}}' data-index='{{index}}' data-txt='A'>
+          <view data-index='{{index}}' data-txt='A'></view>
+        </view>
+        <view data-index='{{index}}' data-txt='A'>A</view>
+      </view>
+      <view class='chk_item' data-index='{{index}}' data-txt='B'>
+        <view class='quan_ {{item==index+"B"?"cur":""}}' data-index='{{index}}' data-txt='B'>
+          <view data-index='{{index}}' data-txt='B'></view>
+        </view>
+        <view data-index='{{index}}' data-txt='B'>B</view>
+      </view>
+      <view class='chk_item' data-index='{{index}}' data-txt='C'>
+        <view class='quan_ {{item==index+"C"?"cur":""}}' data-index='{{index}}' data-txt='C'>
+          <view data-index='{{index}}' data-txt='C'></view>
+        </view>
+        <view data-index='{{index}}' data-txt='C'>C</view>
+      </view>
+      <view class='chk_item' data-index='{{index}}' data-txt='D'>
+        <view class='quan_ {{item==index+"D"?"cur":""}}' data-index='{{index}}'  data-txt='D'>
+          <view data-index='{{index}}'  data-txt='D'></view>
+        </view>
+        <view data-index='{{index}}'  data-txt='D'>D</view>
+      </view>
+      <view class='chk_item' data-index='{{index}}'  data-txt='E'>
+        <view class='quan_ {{item==index+"E"?"cur":""}}' data-index='{{index}}' data-txt='E'>
+          <view data-index='{{index}}' data-txt='E'></view>
+        </view>
+        <view data-index='{{index}}' data-txt='E'>E</view>
+      </view>
+      <view class='chk_item' data-index='{{index}}' data-txt='F'>
+        <view class='quan_ {{item==index+"F"?"cur":""}}' data-index='{{index}}'  data-txt='F'>
+          <view data-index='{{index}}'  data-txt='F'></view>
+        </view>
+        <view data-index='{{index}}'  data-txt='F'>F</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class='cheng'></view>
+<view class='fix_btn' bindtap='sub_mit'>提交答案</view>

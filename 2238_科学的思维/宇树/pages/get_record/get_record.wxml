@@ -1,0 +1,30 @@
+
+
+<!-- <view class='acc_head'>
+  <view>余额提现</view>
+  <view>￥100</view>
+</view>
+<view class='acc_list'>
+  <view class='acc_item'>
+    <view class='acc_none'>
+      <view>申请提现时间</view>
+      <view>2018-08-08 15:26</view>
+    </view>
+    <view class='acc_two'>
+      <view>状态</view>
+      <view>提现成功</view>
+    </view>
+  </view>
+</view> -->
+
+
+
+
+
+<view class='kong_' >
+  <image src='../../images/kong.png'></image>
+  <view>您还没有相关的提现记录</view>
+</view>
+
+<!-- <view class='cheng'></view> -->
+<!-- <navigator class='fix_btn' bindtap='sub_mit' url='../get_now/get_now'>提现</navigator> -->

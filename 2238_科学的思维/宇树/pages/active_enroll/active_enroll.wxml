@@ -1,0 +1,34 @@
+<view class='total_'>
+  <view>总计</view>
+  <view>￥{{data_.price}}</view>
+
+</view>
+
+
+<view class='index_item'>
+  <navigator>
+    <view class='index_left'>
+      <image src='{{url+data_.pic}}'></image>
+    </view>
+    <view class='index_right'>
+      <view class='goods_tit'>
+        {{data_.title}}
+      </view>
+      <view class='goods_info'>
+        <view>时间：{{data_.actime}}</view>
+        <view>地点：{{data_.address}}</view>
+      </view>
+      <view class='goods_price'>￥{{data_.price}}</view>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view class='fix_a'>
+  合计：
+  <text>￥{{data_.price}}</text>
+  <view class='sub_btn' bindtap='post_' >
+    提交报名
+  </view>
+</view>

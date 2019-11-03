@@ -1,0 +1,101 @@
+<view class='car_box'>
+  <view class='car_item {{item.left==true?"h_left":""}}' wx:for='{{list_}}' capture-bind:touchstart='st' capture-bind:touchend='end' data-index='{{index}}'>
+    <view class='lable_item' bindtap='tog_cur' data-index='{{index}}'>
+      <view class='wai_ {{item.cur==true?"cur":""}}' data-index='{{index}}'>
+        <view class='guo_' data-index='{{index}}'></view>
+      </view>
+    </view>
+    <view class='index_item' data-index='{{index}}'>
+      <view class='index_left' data-index='{{index}}'>
+        <image src='{{url+item.pic}}' data-index='{{index}}'></image>
+      </view>
+      <view class='index_right' data-index='{{index}}'>
+        <view class='goods_tit' data-index='{{index}}'>
+          {{item.title}}
+        </view>
+        <view class='goods_info' data-index='{{index}}'>
+          <view wx:if='{{item.label}}' data-index='{{index}}'>{{item.label}}</view>
+        </view>
+        <view class='goods_price' data-index='{{index}}'>￥{{item.price}}</view>
+      </view>
+      <view class='car_del' data-index='{{index}}' data-id='{{item.id}}'  bindtap='de_box'>
+        删除
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class='cheng'></view>
+<view class='cheng'></view>
+
+<view class='car_fix' wx:if="{{list_.length>0}}">
+  <view class='chk_car'>
+    <view class='lable_item' bindtap='tog_all'>
+      <view class='wai_ {{all_cur==true?"cur":""}} }}'>
+        <view class='guo_'></view>
+      </view>
+      <text>全选</text>
+    </view>
+  </view>
+  <view class='go_buy {{is_m==true?"l_":""}}' bindtap='go_buy'>
+    去结算
+  </view>
+
+
+</view>
+<view class='zz' wx:if="{{show_tip}}"></view>
+<view class='tip_box' wx:if="{{show_tip}}">
+  <view class='tip_box_container'>
+    <view class='tip_top'>
+      书籍跟课程不是同一系列的，请分开付款。
+    </view>
+    <view class='tip_bottom' bindtap='i_konw'>
+      好的，我知道了
+    </view>
+  </view>
+</view>
+
+
+
+<view class='kong_' wx:if="{{list_.length<=0}}">
+  <image src='../../images/kong.png'></image>
+  <view>您还没有相关的商品</view>
+</view>
+
+
+
+
+
+<view class='fixed_bottom'>
+  <view class='fixed_item '>
+    <navigator url='../index/index' open-type='reLaunch'>
+      <image src='/images/p1_03.png' class='f'></image>
+      <image src='/images/c1.png' class='n'></image>
+      <view>首页</view>
+    </navigator>
+  </view>
+  <view class='fixed_item cur'>
+    <navigator url='../active/active' open-type='reLaunch'>
+      <image src='/images/p2_03.png' class='f'></image>
+      <image src='/images/c2.png' class='n'></image>
+      <view>购买项</view>
+    </navigator>
+  </view>
+  <view class='fixed_item'>
+    <navigator url='../active/active' open-type='reLaunch'>
+      <button open-type='contact'>
+        <image src='/images/p3_03.png' class='f'></image>
+        <image src='/images/c3.png' class='n'></image>
+        <view>客服</view>
+      </button>
+    </navigator>
+  </view>
+  <view class='fixed_item'>
+    <navigator url='../user/user' open-type='reLaunch'>
+      <image src='/images/p4_03.png' class='f'></image>
+      <image src='/images/c4.png' class='n'></image>
+      <view>个人中心</view>
+    </navigator>
+  </view>
+</view>

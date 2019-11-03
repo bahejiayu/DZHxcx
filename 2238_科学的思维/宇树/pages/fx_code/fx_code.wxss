@@ -1,0 +1,29 @@
+.code_bg{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.code_bg .bg{
+  width: 100%;
+}
+.code_container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.code_container image{
+  width:400rpx ;
+  height: 400rpx;
+}
+.code_container{
+  text-align: center;
+
+}
+.code_container view{
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 50rpx;
+}

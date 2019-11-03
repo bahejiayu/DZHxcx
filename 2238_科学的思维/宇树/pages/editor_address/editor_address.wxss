@@ -1,0 +1,115 @@
+page{
+  background-color: #f7f7f7;
+  /* color: #333; */
+  font-size: 30rpx;
+}
+.container_form{
+  background-color: #fff;
+}
+.item_{
+  border-top: 1px solid #dcdcdc;
+  padding-left: 190rpx;
+  overflow: hidden;
+  position: relative;
+
+}
+.tit_{
+  color: #828282;
+  height: 90rpx;
+  position: absolute;
+  left:30rpx ;
+  line-height: 90rpx;
+}
+input{
+  height: 90rpx;
+  color:#333 ;
+  padding-right: 100rpx;
+}
+textarea{
+  height: 140rpx;
+  padding-right: 30rpx;
+  width: 100%;
+  padding-top: 25rpx;
+}
+.nctouch-default-list image{
+  position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 25rpx;
+    display: block;
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: -15rpx;
+    opacity: 0.65;
+}
+.set_mo{
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.mo_left{
+  float: left;
+  
+}
+.mo_right{
+  float: right;
+}
+.del_{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 100rpx;
+  color: #9d2427;
+}
+.item_ image{
+  width: 15rpx;
+  height: 25rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.head_c{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  width: 100%;
+  background-color: #f5f5f5;
+  position: fixed;
+  z-index: 10000;
+ 
+}
+
+.nctouch-default-list {
+    overflow: hidden;
+    padding: 0 0 0 25rpx;
+    background-color: #FFF;
+    border-top: solid 2rpx #EEE;
+    border-bottom: solid 2rpx #EEE;
+  padding-top: 80rpx;
+    
+}
+.nctouch-default-list .li{
+      position: relative;
+    z-index: 1;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    padding: 25rpx 0;
+    line-height: 50rpx;
+    border-top: solid 2rpx #EEE;
+}
+.nctouch-default-list .li:last-child{
+  border-top: none;
+}
+.nctouch-default-list .h4{
+      float: left;
+    margin-left: 15rpx;
+    font-size: 35rpx;
+    line-height: 50rpx;
+    color: #333;
+}

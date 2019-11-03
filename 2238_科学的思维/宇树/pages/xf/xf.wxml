@@ -1,0 +1,10 @@
+<view class='txt_container'>
+
+<rich-text nodes='{{txt_}}'></rich-text>
+
+</view>
+
+    <!-- <view class='cheng'></view>
+<view class='fix_btn' bindtap='next_'>
+下一步
+</view> -->

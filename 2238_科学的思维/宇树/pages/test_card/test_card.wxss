@@ -1,0 +1,86 @@
+page{
+  border-top:1px solid #dcdcdc;
+}
+.top_txt{
+  text-align: center;
+  padding: 50rpx 0 40rpx 0;
+  font-size: 30rpx;
+  color:#febd00 ;
+}
+.top_txt text{
+  text-decoration:underline ;
+}
+.test_box{
+  padding: 0 25rpx;
+}
+.test_item{
+  padding-left: 60rpx;
+  position: relative;
+  height: 25rpx;
+  margin-bottom: 50rpx;
+}
+.test_item text{
+  position: absolute;
+  font-size: 30rpx;
+  font-weight: bold;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.chk_list{
+  overflow: hidden;
+}
+.chk_item{
+  float: left;
+  width: 16.66%;
+  overflow: hidden;
+}
+.chk_item view{
+  float: left;
+  font-size: 28rpx;
+  line-height: 26rpx;
+  color: #333333;
+}
+.quan_{
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+  border: 2rpx solid #888888;
+  margin-right: 10rpx;
+  position: relative;
+}
+.quan_ view{
+  width:15rpx ;
+  height: 15rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #ff3153;
+  display: none;
+}
+
+.quan_.cur{
+  border: 2rpx solid #ff3153;
+
+}
+.quan_.cur view{
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<view hidden='{{bj_show}}'>
+  <view class='container_form'>
+    <view class='item_'>
+      <view class='tit_'>收货人</view>
+      <input type='text' placeholder='请输入收货人姓名' bindinput='get_name'></input>
+    </view>
+    <view class='item_'>
+      <view class='tit_'>手机号码</view>
+      <input type='text' placeholder='请输入收货人手机号' bindinput='get_phone'></input>
+    </view>
+    <view class='item_'>
+      <view class='tit_'>邮政编码</view>
+      <input type='text' placeholder='请输入邮政编码' bindinput='get_code'></input>
+    </view>
+    <view class='item_' bindtap='show_sheng'>
+      <view class='tit_'>省市区</view>
+      <input type='text' placeholder='请选择' disabled='{{true}}' value='{{region}}'></input>
+      <image src='../../images/dr_03.png'></image>
+    </view>
+    <!-- <view class='item_'>
+    <view class='tit_'>街道</view>
+    <input type='text' placeholder='请选择' disabled='{{true}}' ></input>
+     <image src='../../images/dr_03.png'></image>
+  </view> -->
+    <view class='item_'>
+      <view class='tit_'>详细地址</view>
+      <textarea bindinput='get_area' placeholder='请输入详细地址'></textarea>
+    </view>
+  </view>
+
+
+
+
+
+
+
+<!-- 
+  <view class='set_mo'>
+    <view class='mo_left'>设为默认</view>
+    <view class='mo_right'>
+      <switch bindchange='is_default' checked='{{true}}' />
+    </view>
+  </view>
+   -->
+
+
+  <view class='fix_btn' bindtap='submit_'>提交</view>
+
+</view>
+
+
+
+
+
+
+
+
+<!-- 省 -->
+<view wx:if="{{sheng_show}}">
+  <view class='head_c' bindtap='close_'>关闭</view>
+  <view class='nctouch-default-list'>
+    <view class='li' wx:for="{{sheng_arr}}" data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='sheng_cl'>
+      <view class='h4' data-area_id='{{item.id}}' data-area_name='{{item.id}}' bindtap='sheng_cl'>{{item.title}}</view>
+      <image src='../../../images/arrow_right_b.png' data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='sheng_cl'></image>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 市 -->
+<view wx:if="{{shi_show}}">
+  <view class='head_c' bindtap='close_'>关闭</view>
+  <view class='nctouch-default-list'>
+    <view class='li' wx:for="{{shi_arr}}" data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='shi_cl'>
+      <view class='h4' data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='shi_cl'>{{item.title}}</view>
+      <image src='../../../images/arrow_right_b.png' data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='shi_cl'></image>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 区 -->
+<view wx:if="{{qu_show}}">
+  <view class='head_c' bindtap='close_'>关闭</view>
+  <view class='nctouch-default-list'>
+    <view class='li' wx:for="{{qu_arr}}" data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='qu_cl'>
+      <view class='h4' data-area_id='{{item.id}}' data-area_name='{{item.title}}' bindtap='qu_cl'>{{item.title}}</view>
+      <image src='../../../images/arrow_right_b.png' data-area_name='{{item.title}}' data-area_id='{{item.id}}' bindtap='qu_cl'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+<view class='top_nav'>
+  <view class='{{cur_txt=="全部"?"cur":""}}' data-cur='全部' bindtap='tog_order'>
+    全部
+    <view class='kuai' data-cur='全部'></view>
+  </view>
+  <view class='{{cur_txt=="待支付"?"cur":""}}' data-cur='待支付' bindtap='tog_order'>待支付
+    <view class='kuai' data-cur='待支付'></view>
+  </view>
+  <view class='{{cur_txt=="待发货"?"cur":""}}' data-cur='待发货' bindtap='tog_order'>待发货
+    <view class='kuai' data-cur='待发货'></view>
+  </view>
+  <view class='{{cur_txt=="待收货"?"cur":""}}' data-cur='待收货' bindtap='tog_order'>待收货
+    <view class='kuai' data-cur='待收货'></view>
+  </view>
+  <view class='{{cur_txt=="退换/售后"?"cur":""}}' data-cur='退换/售后' bindtap='tog_order'>退换/售后
+    <view class='kuai' data-cur='退换/售后'></view>
+  </view>
+</view>
+
+
+<view class='order_box'>
+  <view class='order_item' wx:for='{{order_list}}' wx:for-item='t1'>
+    <view class='order_head'>
+      <view wx:if='{{t1.status==1}}'>待支付</view>
+      <view wx:if='{{t1.status==2}}'>待发货</view>
+      <view wx:if='{{t1.status==3}}'>待收货</view>
+      <view wx:if='{{t1.status==4||t1.status==5}}'>已完成</view>
+      <view>
+        <text>订金：</text>￥{{t1.total}}</view>
+    </view>
+    <view class='index_item' wx:for='{{t1.all}}' wx:for-item='t2'>
+      <navigator url='../order_detail/order_detail?id={{t1.id}}'>
+        <view class='index_left'>
+          <image src='{{url+t2.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{t2.title}}
+          </view>
+          <view class='goods_info'>
+            <!-- <view>普通套餐（￥1000/小时）</view> -->
+          </view>
+          <view class='goods_price' wx:if='{{t1.express}}'>{{t1.express}}：{{t1.express_number}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class='order_foot'>
+      <navigator class='an' wx:if='{{t1.status==1}}' data-id='{{t1.id}}' bindtap='del_order' >取消订单</navigator>
+      <navigator wx:if='{{t1.status==1}}'  data-id='{{t1.id}}' bindtap='pay_' >立即支付</navigator>
+      <navigator url='../tui/tui?id={{t1.id}}' class='an' wx:if='{{t1.status==2||t1.status==3||t1.status==4}}'>申请售后</navigator>
+      <navigator wx:if='{{t1.status==3}}' bindtap='sure_' data-id='{{t1.id}}' >确认收货</navigator>
+    </view>
+  </view>
+
+
+
+</view>
+
+<view class='kong_' wx:if="{{order_list.length<=0}}">
+  <image src='../../images/kong.png'></image>
+  <view>您还没有相关的订单</view>
+</view>

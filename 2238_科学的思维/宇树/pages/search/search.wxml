@@ -1,0 +1,33 @@
+
+<view class='top_search'>
+  <view class='top_box'>
+  
+    <view class='search_box' >
+      <image src='/images/dfj_03.png'></image>
+        <input type='text' placeholder='搜索书籍' bindinput='get_ser'></input>
+    </view>
+      <view class='code_btn' bindtap='btn_'>
+      搜索
+      <!-- <image src='/images/code_btn_03.png'></image> -->
+    </view>
+  </view>
+</view>
+
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{list_}}' wx:key='{{index}}'>
+      <navigator url='../book_detail/book_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>{{item.peoplenum}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>

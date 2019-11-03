@@ -1,0 +1,120 @@
+.ques_top{
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #fff;
+  padding: 0 25rpx;
+  font-size: 24rpx;
+  color: #828282;
+
+}
+.ques_top image{
+  width:30rpx ;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  height: 30rpx;
+}
+.ge{
+  height: 30rpx;
+  background-color: #f7f7f7;
+}
+.quse_box{
+  padding: 0 15px;
+}
+.cheng {
+  height: 250rpx;
+  
+}
+.de_{
+  padding: 4rpx 10rpx;
+  background-color: #db7ffc;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  transform: translateY(-150%);
+}
+.quse_tit{
+  text-align: center;
+  font-size: 30rpx;
+  color: #333333;
+  height: 110rpx;
+  line-height: 130rpx;
+  overflow: hidden;
+}
+
+.quse_img image{
+  width: 100%;
+  height: 500rpx;
+}
+.quse_img {
+  margin-bottom: 30rpx;
+}
+.quse_des{
+  font-size: 35rpx;
+  color: #333333;
+  margin-bottom: 90rpx;
+  font-weight: bold;
+  
+}
+
+progress{
+    border: 1px solid #dcdcdc;
+  }
+
+.pro{
+overflow: hidden;
+position: relative;
+border-radius: 20rpx;
+
+}
+.tuo{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  box-shadow:0px 0px  5px 2px #aaa;
+   transform: translateY(-50%) translateX(-50%);
+
+}
+.dy{
+  /* transform: translateY(-50%) translateX(-25px); */
+  
+}
+
+.pro_z{
+  position: relative;
+}
+
+.gun{
+  z-index: 10000;
+  width: 15px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: top 0.2s;
+}
+.pro_container{
+  position: relative;
+  /* padding-left: 40px; */
+  padding:0 40px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

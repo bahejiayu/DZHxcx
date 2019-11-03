@@ -1,0 +1,60 @@
+<view class='top_chk_box'>
+  <view  wx:for='{{teacher_list}}' bindtap='tog_teacher' class='chk_item {{index_==index?"cur":""}}' data-index='{{index}}'>
+    <view data-index='{{index}}'>
+      <view data-index='{{index}}'>{{item.title}}</view>
+      <view data-index='{{index}}'>老师</view>
+    </view>
+  </view>
+
+
+
+</view>
+
+
+<view class='yy_time' bindtap='yy_true'>
+  <view>预约时间</view>
+  <view>
+    {{time_}}
+    <image src='/images/right__03.png'></image>
+  </view>
+</view>
+
+<view class='zz' wx:if='{{show_yy||success_tip}}' bindtap='yy_false'></view>
+<view class='tip_box' wx:if='{{success_tip}}'>
+  <view class='tip_box_container'>
+    <view class='tip_top'>
+      恭喜您支付成功，请按时到现场完成测评！您的会员号是{{hy_num}}，可以在个人中心查看。
+    </view>
+    <view class='tip_bottom' bindtap='i_konw'>
+      好的，我知道了
+    </view>
+  </view>
+</view>
+
+<view class='show_toast' wx:if='{{cu_tip}}'>
+  该老师在该时间已有其他用户预约了，需等候{{count}}人，如果愿意等待，请再次确定时间，如果不愿意等待，请另外选一个时间。
+</view>
+
+
+
+<view class='yy_box' wx:if='{{show_yy}}'>
+  <view class='yy_top'>
+    <view class='qx_' bindtap='yy_false'>取消</view>
+    <view class='qd_' bindtap='sure_time'>确定</view>
+    <text>请选择要预约的时间</text>
+  </view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 430rpx;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{d1}}" wx:key="{{index}}" style="line-height: 50px">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{d2}}" wx:key="{{index}}" style="line-height: 50px">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{d3}}" wx:key="{{index}}" style="line-height: 50px">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+
+<view class='fix_btn' style='z-index:1000;' bindtap='sub_mit'>确定</view>

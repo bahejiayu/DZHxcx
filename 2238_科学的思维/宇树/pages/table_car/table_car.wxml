@@ -1,0 +1,34 @@
+<view class='total_'>
+  <view>总计</view>
+  <view>￥98</view>
+
+</view>
+
+
+<view class='index_item'>
+  <navigator>
+    <view class='index_left'>
+      <image src='/images/index_img_05.jpg'></image>
+    </view>
+    <view class='index_right'>
+      <view class='goods_tit'>
+        这是活动标题这是活动标题
+      </view>
+      <view class='goods_info'>
+        <view>时间：2018-08-08 11:00</view>
+        <view>地点：广东广州海珠区琶洲国际会展中心C区中心C区</view>
+      </view>
+      <view class='goods_price'>￥98</view>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view class='fix_a'>
+  合计：
+  <text>￥98</text>
+  <view class='sub_btn'>
+    提交报名
+  </view>
+</view>

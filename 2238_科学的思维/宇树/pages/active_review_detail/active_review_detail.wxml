@@ -1,0 +1,23 @@
+<view class='vide_container'  wx:if='{{!is_play}}' bindtap='play_viode'>
+  <image src='/images/play_03.png' class='play_'></image>
+  <image src='{{url+data_.pic}}' class='vide_z'></image>
+</view>
+
+<view class='video_play' wx:if='{{is_play}}'>
+<video src='{{url+data_.revideo}}' autoplay='{{true}}'></video>
+</view>
+
+<view class='review_top'>
+  <view class='active_anme'>{{data_.title}} 
+  </view>
+  <view class='active_time'>
+    时间：{{data_.retime}}
+  </view>
+</view>
+
+<view class='detail_box'>
+  <view class='detail_tit'>活动详情</view>
+  <view class='detail_content'>
+    <rich-text nodes='{{data_.content}}'></rich-text>
+  </view>
+</view>

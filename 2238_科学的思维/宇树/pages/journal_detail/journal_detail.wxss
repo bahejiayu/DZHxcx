@@ -1,0 +1,51 @@
+.jo_container{
+    padding: 25rpx;
+    border-top: 1px solid #dcdcdc;
+}
+
+.jo_tit{
+  text-align: center;
+  font-size:30rpx ;
+  color: #333333;
+  font-weight: bold;
+}
+.jo_content{
+  font-size:28rpx ;
+  color: #333333;
+  margin-top: 10rpx;
+  line-height: 40rpx;
+}
+.jo_content image{
+  max-width: 100%;
+  width: 300rpx;
+}
+.imgs{
+  margin-top: 40rpx;
+}
+
+.jo_time{
+  font-size: 28rpx;
+  color: #828282;
+  margin: 45rpx 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

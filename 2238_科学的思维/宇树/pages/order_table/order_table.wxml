@@ -1,0 +1,63 @@
+<view style='position:relative;' class='dw'>
+  <view class='address_info'>
+    <navigator url='../sel_address/sel_address' hover-class="none">
+      <view class='mdz' wx:if='{{order_info.address_default.length==0}}'>
+        <image src='../../images/mdz_03.png'></image>
+        <view>您还没有收货地址，去添加</view>
+      </view>
+      <image src='../../images/dr_03.png' class='ico_address'></image>
+      <view class='add_detail'  wx:if='{{order_info.address_default.length>0}}'>
+        <view class='top'>
+          <view class='add_l'>
+            收货人：{{order_info.address_default[0].name}}
+          </view>
+          <view class='add_r'>
+            {{order_info.address_default[0].mobile}}
+          </view>
+        </view>
+        <view>收货地址： {{order_info.address_default[0].province}}  {{order_info.address_default[0].address}}</view>
+      </view>
+    </navigator>
+  </view>
+  <image src='../../images/bian_02.jpg' class='bian_' mode='widthFix'></image>
+</view>
+
+
+<view class='total_line'>
+  <view>总计</view>
+  <view>￥{{order_info.total}}</view>
+</view>
+
+
+<view class='index_item' wx:for='{{order_info.goods}}' >
+  <navigator>
+    <view class='index_left'>
+      <image src='{{url+item.pic}}'></image>
+    </view>
+    <view class='index_right'>
+      <view class='goods_tit'>
+        {{item.title}}
+      </view>
+      <!-- <view class='goods_info'>
+        <view>时间：2018-08-08 11:00</view>
+        <view>地点：广东广州海珠区琶洲国际会展中心C区中心C区</view>
+      </view> -->
+      <view class='goods_price'>￥{{item.price}}</view>
+    </view>
+  </navigator>
+</view>
+
+<view class='jg_tip'>
+提示：签收书籍时，如果遇到书籍损坏需要退换货的，必
+须要上传一张有快递员在场的照片作为凭证。否则一律不
+予退换。
+
+</view>
+
+<view class='fix_a'>
+  合计：
+  <text>￥{{order_info.total}}</text>
+  <view class='sub_btn' bindtap='sub_mit'>
+    提交订单
+  </view>
+</view>

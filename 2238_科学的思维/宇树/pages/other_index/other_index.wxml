@@ -1,0 +1,11 @@
+<view class='index_banner' style='height:{{winHeight}}px;'>
+  <navigator>
+    <image src='/images/index_banner.jpg'></image>
+  </navigator>
+  <button open-type='getUserInfo' bindgetuserinfo="login_" wx:if='{{is_login==false}}'>
+    <view class='btn_'>报名参加</view>
+  </button>
+  <button bindtap='go_next' wx:if='{{is_login!=false}}'>
+    <view class='btn_'>报名参加</view>
+  </button>
+</view>

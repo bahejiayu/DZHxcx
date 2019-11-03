@@ -1,0 +1,310 @@
+<view class='top_search'>
+  <view class='top_box'>
+    <view class='code_btn' bindtap='code_cli'>
+      <image src='/images/code_btn_03.png'></image>
+    </view>
+    <view class='search_box' bindtap='go_search'>
+      <image src='/images/dfj_03.png'></image>
+      搜索书籍
+    </view>
+  </view>
+</view>
+<view class='top_nav'>
+  <scroll-view class="scroll-view_H" scroll-x>
+    <view class='sc_item {{cur_id==174?"cur":""}}' data-txt='录播间课程' data-id='174' bindtap='get_nav'>
+      录播间课程
+      <view class='kuai' data-txt='录播间课程' data-id='174'></view>
+    </view>
+    <view class='sc_item {{cur_id==175?"cur":""}}' data-txt='线下课程' data-id='175' bindtap='get_nav'>
+      线下课程
+      <view class='kuai' data-txt='线下课程' data-id='175'></view>
+    </view>
+    <view class='sc_item {{cur_id==176?"cur":""}}' data-txt='书籍商城' data-id='176' bindtap='get_nav'>书籍商城
+      <view class='kuai' data-txt='书籍商城' data-id='176'></view>
+    </view>
+    <view class='sc_item {{cur_id==184?"cur":""}}' data-txt='沙盘课程' data-id='184' bindtap='get_nav'>沙盘课程
+      <view class='kuai' data-txt='沙盘课程' data-id='184'></view>
+    </view>
+    <view class='sc_item {{cur_id==185?"cur":""}}' data-txt='游学课程' data-id='185' bindtap='get_nav'>游学课程
+      <view class='kuai' data-txt='游学课程' data-id='185'></view>
+    </view>
+    <view class=' sc_item {{cur_id==189?"cur":""}}' data-txt='活动' data-id='189' bindtap='get_nav'>活动
+      <view class='kuai' data-txt='活动' data-id='189'></view>
+    </view>
+  </scroll-view>
+</view>
+
+
+
+<view class='banner'>
+  <swiper autoplay='{{true}}' indicator-dots='{{true}}' indicator-color='rgba(255,255,255,.4)' indicator-active-color='#fff'>
+    <swiper-item wx:for='{{banner_list}}' wx:key='{{index}}' data-title="{{item.title}}" bindtap='go_other'>
+      <image src='{{url+item.pic}}' data-title="{{item.title}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 录播间课程 -->
+<view wx:if='{{cur_id==174}}' class='co_box'>
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{data_1}}' wx:key='{{index}}'>
+      <navigator url='../course_detail/course_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>时长：{{item.video_time}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.tc_data[0].price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+<!-- // 获取录线下课程 -->
+<view wx:if='{{cur_id==175}}' class='co_box'>
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{data_2}}' wx:key='{{index}}'>
+      <navigator url='../table_detail/table_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>{{item.peoplenum}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+<!-- 获取书籍商场 -->
+<view wx:if='{{cur_id==176}}' class='co_box'>
+  <view class='book_box'>
+    <view class='book_type'>
+      <view class='type_item' bindtap='tog_data_3' data-id='全部' wx:key='{{index}}'>
+        <view class='type_container  {{nav3=="全部"?"cur":""}}' data-id='全部'>
+          全部
+        </view>
+      </view>
+      <view class='type_item' wx:for='{{data_3.menu}}' bindtap='tog_data_3' data-id='{{item.id}}' wx:key='{{index}}'>
+        <view class='type_container {{nav3==item.id?"cur":""}}' data-id='{{item.id}}'>
+          {{item.title}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{data_3.data}}' wx:key='{{index}}'>
+      <navigator url='../book_detail/book_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>{{item.peoplenum}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+<!--  获取沙盘课程 -->
+<view wx:if='{{cur_id==184}}' class='co_box'>
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{data_4}}' wx:key='{{index}}'>
+      <navigator url='../sha_detail/sha_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>{{item.peoplenum}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.tc_data[0].price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+<!-- 获取游学课程 -->
+<view wx:if='{{cur_id==185}}' class='co_box'>
+  <view class='book_box'>
+    <view class='book_type'>
+      <view class='type_item' bindtap='tog_data_5' data-id='全部' wx:key='{{index}}'>
+        <view class='type_container  {{nav5=="全部"?"cur":""}}' data-id='全部'>
+          全部
+        </view>
+      </view>
+      <view class='type_item' wx:for='{{data_5.menu}}' bindtap='tog_data_5' data-id='{{item.id}}' wx:key='{{index}}'>
+        <view class='type_container {{nav5==item.id?"cur":""}}' data-id='{{item.id}}'>
+          {{item.title}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{data_5.data}}' wx:key='{{index}}'>
+      <navigator url='../yx_detail/yx_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>{{item.peoplenum}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+
+
+<!--  获取活动 -->
+<view wx:if='{{cur_id==189}}' class='co_box'>
+  <view class='index_box'>
+    <view class='index_item' wx:for='{{data_6}}' wx:key='{{index}}'>
+      <navigator url='../active_detail/active_detail?id={{item.id}}'>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <view>时间:{{item.actime}}</view>
+            <view>地点:{{item.address}}</view>
+          </view>
+          <view class='goods_price'>￥{{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- <view class='zz'></view>
+<view class='right_concar'>
+  <view class='right_box'>
+    <view class='cancat_tit'>在线客服</view>
+    <view class='concat_list'>
+      <view class='concat_item' wx:for='[1,2]'>
+        <image src='/images/head_img_03.jpg'></image>
+        微信客服1
+      </view>
+    </view>
+
+  </view>
+
+</view> -->
+
+
+
+
+
+
+
+
+
+
+<view class='cheng'></view>
+<view class='fixed_bottom'>
+  <view class='fixed_item cur'>
+    <navigator>
+      <image src='/images/p1_03.png' class='f'></image>
+      <image src='/images/c1.png' class='n'></image>
+      <view>首页</view>
+    </navigator>
+  </view>
+  <view class='fixed_item'>
+    <navigator url='../shopcar/shopcar' open-type='reLaunch'>
+      <image src='/images/p2_03.png' class='f'></image>
+      <image src='/images/c2.png' class='n'></image>
+      <view>购买项</view>
+    </navigator>
+  </view>
+  <view class='fixed_item'>
+    <navigator url='../active/active' open-type='reLaunch'>
+      <button open-type='contact'>
+        <image src='/images/p3_03.png' class='f'></image>
+        <image src='/images/c3.png' class='n'></image>
+        <view>客服</view>
+      </button>
+    </navigator>
+  </view>
+
+  <view class='fixed_item'>
+    <navigator url='../user/user' open-type='reLaunch'>
+      <image src='/images/p4_03.png' class='f'></image>
+      <image src='/images/c4.png' class='n'></image>
+      <view>个人中心</view>
+
+    </navigator>
+  </view>
+</view>
+
+
+<view class='zz' wx:if='{{shwo_login}}'></view>
+<view class='cancel_box' wx:if='{{shwo_login}}'>
+  <view class='can_top'>
+    <view class='can_img'>
+      <image src='/images/cgth_03.png'></image>
+    </view>
+    <view>您还未登录请登录后,重新扫码才可以绑定下级关系!
+    </view>
+  </view>
+  <view class='can_bottom'>
+    <button open-type='getUserInfo' bindgetuserinfo="login_">
+    <view class='can_d' bindtap='again_wait'>确定</view>
+    </button>
+  </view>
+</view>
+
+
+<navigator class='back_house' url='../sing/sing'>
+  <image src='/images/home_3.png'></image>
+  <view>签到</view>
+
+
+</navigator>

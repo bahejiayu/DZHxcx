@@ -1,0 +1,30 @@
+<view class='index_box'>
+  <view class='index_item'>
+    <navigator>
+      <view class='index_left'>
+        <image src='{{url+data_.pic}}'></image>
+      </view>
+      <view class='index_right'>
+        <view class='goods_tit'>
+          {{data_.title}}
+        </view>
+        <view class='goods_info'>
+          <view>
+            <text wx:if='{{data_.meal}}'>{{data_.meal}}</text>
+            <text wx:if='{{data_.u_label}}'>{{data_.u_label}}</text>
+          </view>
+        </view>
+        <!-- <view class='goods_price'>￥98</view> -->
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+
+<view class='area_txt'>
+  <textarea placeholder='请输入评价' bindinput='get_area'></textarea>
+
+</view>
+
+<view class='fix_btn' bindtap='sub_mit'>提交</view>

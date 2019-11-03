@@ -1,0 +1,88 @@
+<view class='info_top' wx:if='{{!flag_}}'>
+  第{{num}}次测评
+</view>
+<view class='info_item'>
+  <view class='info_item_top'>
+    姓名
+  </view>
+  <view class='info_item_bottom'>
+    <input placeholder='请输入您的姓名' value='{{name_}}' bindinput='get_name'></input>
+  </view>
+</view>
+
+<view class='info_item'>
+  <view class='info_item_top'>
+    年龄
+  </view>
+  <view class='info_item_bottom'>
+    <input placeholder='请输入您的年龄' value='{{age_}}'  type='number' bindinput='get_age'></input>
+  </view>
+</view>
+
+<view class='info_item'>
+  <view class='info_item_top'>
+    手机号码
+  </view>
+  <view class='info_item_bottom'>
+    <input placeholder='请输入您的手机号码' value='{{mobile_}}'  bindinput='get_mobile'></input>
+  </view>
+</view>
+
+
+
+<view class='info_item'>
+  <view class='info_item_top'>
+    学历
+  </view>
+  <view class='info_item_bottom'>
+    <input placeholder='请输入您的学历' value='{{edc_}}' bindinput='get_edc'></input>
+  </view>
+</view>
+
+
+<view class='info_item'>
+  <view class='info_item_top'>
+    职业
+  </view>
+  <view class='info_item_bottom'>
+    <input placeholder='请输入您的职业' value='{{vocation_}}' bindinput='get_vocation'></input>
+  </view>
+</view>
+
+
+
+
+
+<view class='info_item'>
+  <view class='info_item_top'>
+    性别
+  </view>
+  <view class='info_item_bottom' style='height:auto; background-color: #f7f7f7;'>
+     <view class='inp_container bkh'>
+      <view class='lable_item' bindtap='get_sex' data-sex='1'>
+        <view class='wai_  {{sex_==1?"cur":""}} ' data-sex='1' >
+          <view class='guo_' data-sex='1'></view>
+        </view>
+        <text data-sex='1' >男</text>
+
+      </view>
+       <view class='lable_item' bindtap='get_sex'   data-sex='2'>
+        <view class='wai_ {{sex_==2?"cur":""}} '  data-sex='2' >
+          <view class='guo_'   data-sex='2'></view>
+        </view>
+        <text   data-sex='2'>女</text>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='cheng'></view>
+<view class='fix_btn' bindtap='next_'>{{txt_}}</view>
+
+
+
+
+

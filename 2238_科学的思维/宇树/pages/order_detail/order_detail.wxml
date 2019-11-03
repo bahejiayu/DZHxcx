@@ -1,0 +1,69 @@
+<view class='address_info'>
+  <image src='/images/ad_ico_03.png' class='ico_address'></image>
+  <view class='add_detail'>
+    <view class='top'>
+      <view class='add_l'>
+        收货人：{{all_data.data.name}}
+      </view>
+      <view class='add_r'>
+        {{all_data.data.mobile}}
+      </view>
+    </view>
+    <view>收货地址：{{all_data.data.address}}</view>
+  </view>
+</view>
+
+
+
+<view class='order_box'>
+  <view class='order_item'>
+    <view class='order_head'>
+      <view wx:if='{{all_data.data.status==1}}'>待支付</view>
+      <view wx:if='{{all_data.data.status==2}}'>待发货</view>
+      <view wx:if='{{all_data.data.status==3}}'>待收货</view>
+      <view wx:if='{{all_data.data.status==4||all_data.data.status==5}}'>已完成</view>
+      <view>
+        <text>订金：</text>￥{{all_data.data.total}}</view>
+    </view>
+    <view class='index_item' wx:for='{{all_data.data.all}}'>
+      <navigator>
+        <view class='index_left'>
+          <image src='{{url+item.pic}}'></image>
+        </view>
+        <view class='index_right'>
+          <view class='goods_tit'>
+            {{item.title}}
+          </view>
+          <view class='goods_info'>
+            <!-- <view>普通套餐（￥1000/小时）</view> -->
+          </view>
+          <view class='goods_price' wx:if='{{item.express}}'>{{item.express}}：{{item.express_number}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class='order_foot'>
+
+      <navigator class='an' wx:if='{{all_data.data.status==1}}' data-id='{{all_data.data.id}}' bindtap='del_order'>取消订单</navigator>
+      <navigator wx:if='{{all_data.data.status==1}}' bindtap='pay_'  data-id='{{all_data.data.id}}'>立即支付</navigator>
+      <navigator class='an'  url='../tui/tui?id={{all_data.data.id}}' wx:if='{{all_data.data.status==2||all_data.data.status==3||all_data.data.status==4}}'>申请售后</navigator>
+      <navigator wx:if='{{all_data.data.status==3}}' bindtap='sure_' data-id='{{all_data.data.id}}'>确认收货</navigator>
+
+
+    </view>
+  </view>
+
+
+
+</view>
+
+
+
+<view class='order_time'>
+  <view wx:for='{{all_data.time}}'>
+    <view class='time_l'>{{item.title}}</view>
+    <view class='time_r'>{{item.time}}</view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,87 @@
+<view class='vide_container'>
+  <image src='{{url+data_.pic}}' class='video_c' wx:if='{{!show_video}}' bindtap='tog_video'></image>
+  <image src='/images/play_03.png' class='play_'  wx:if='{{!show_video}}' bindtap='tog_video'></image>
+  <video src='{{url+data_.video}}'  wx:if='{{show_video}}' autoplay='{{true}}'></video>
+</view>
+<view class='goods_top'>
+  <view class='goods_tit'>{{data_.title}}</view>
+  <view class='info_item'>
+    时长 : {{data_.video_time}}
+  </view>
+  <!-- <view class='goods_price'>￥{{data_.price}}</view> -->
+  <view class='fu'>
+    <view class='fu_item' bindtap='tog_sc'>
+      <button hover-class="none">
+        <image src='{{is_sc==true?"/images/starl_03.png":"/images/starx_03.png"}}'></image>
+        <view>收藏</view>
+      </button>
+    </view>
+  </view>
+</view>
+
+
+<view class='type_box'>
+  <view class='type_tit'>
+    可选套餐
+  </view>
+  <view class='type_list'>
+    <view class='type_item' wx:for='{{data_.tc_data}}' data-index='{{index}}' bindtap='tog_tc'>
+      <view class='type_container {{cur_index==index?"cur":""}}' data-index='{{index}}'>
+        <view data-index='{{index}}'>
+          {{item.name}}
+        </view>
+        <view data-index='{{index}}'>
+          价格：￥{{item.price}}
+        </view>
+        <view data-index='{{index}}'>
+          播放次数: {{item.num}}<text wx:if='{{item.num!="不限"}}'>次</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+<view class='goods_nav'>
+  <view class='goods_nav_item {{type_==1?"cur":""}}' data-type='1' bindtap='tog_type'>课程简介</view>
+  <view class='goods_nav_item {{type_==2?"cur":""}}' data-type='2'  bindtap='tog_type'>评价</view>
+</view>
+<view class='html_txt' wx:if='{{type_==1}}'>
+    <rich-text nodes='{{data_.desc}}'></rich-text>
+
+</view>
+
+<view wx:if='{{type_==2}}'>
+  <view class='eval_box' wx:if='{{ev_list.length>0}}'>
+    <view class='eval_list' wx:for='{{ev_list}}'>
+      <view class='eval_top'>
+        <view class='ev_top_left'>
+          <view class='ev_img'>
+            <image src='{{item.headimage}}'></image>
+          </view>
+          <view class='ev_txt'>
+            <view class='ev_name'>{{item.name||item.nickname}}</view>
+            <view class='ev_start'>
+            </view>
+          </view>
+        </view>
+        <view class='right_deta'>{{item.c_time}}</view>
+      </view>
+      <view class='ev_content'>
+        {{item.content}}
+      </view>
+    </view>
+  </view>
+  <view class='no_ev' wx:if='{{ev_list.length<=0}}'>
+    还没有相关的评论...
+  </view>
+</view>
+
+
+<view class='cheng'></view>
+<view class='fix_btn'>
+  <view bindtap='buy_'>立即购买</view>
+  <view bindtap='add_car'>加入购物车</view>
+</view>

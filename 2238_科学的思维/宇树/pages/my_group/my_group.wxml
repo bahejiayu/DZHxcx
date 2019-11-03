@@ -1,0 +1,21 @@
+<view class='group_tit'>我的下线</view>
+<view class='group_box'>
+    <view class='group_item' wx:for='{{list_}}'>
+        <image src='{{item.headimage}}'></image>
+        <view>{{item.name||item.nickname}}</view>
+    </view>
+
+
+
+ <view class='kong_' wx:if="{{list_.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>您还没有线下</view>
+  </view>
+
+
+
+
+
+
+</view>
+

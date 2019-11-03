@@ -1,0 +1,27 @@
+<view class='tit_'>姓名</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入您的姓名' bindinput='get_name'></input>
+</view>
+
+<view class='tit_'>电话</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入您的电话' bindinput='get_phone'></input>
+</view>
+
+<view class='tit_'>年龄</view>
+<view class='inp_'>
+  <input type='number' placeholder='请输入您的年龄' bindinput='get_age'></input>
+</view>
+<view class='tit_'>地点</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入所在地点，例如：广东省广州市' bindinput='get_address'></input>
+</view>
+
+<view class='apply_tip'>
+提示：成为分销商的前提条件是需要在本平台完成一笔消费哦！
+</view>
+
+
+
+<view class='cheng'></view>
+<view class='fix_btn' bindtap='sub_mit'>提交审核</view>

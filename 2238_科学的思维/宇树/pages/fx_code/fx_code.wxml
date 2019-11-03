@@ -1,0 +1,9 @@
+
+
+<view class='code_bg'>
+    <image src='/images/fx_code_02.jpg' class='bg' mode='widthFix'></image>
+    <view class='code_container'>
+        <image src='{{url+"/"+data_.img}}'></image>
+        <view>{{data_.hint}}</view>
+    </view>
+</view>

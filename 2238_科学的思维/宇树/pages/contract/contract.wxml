@@ -1,0 +1,64 @@
+<view class='ht_box'>
+  <view class='ht_item'>
+    <view class='ht_tit'>
+      甲方：
+    </view>
+    <input type='text' placeholder='姓名' bindinput='get_name1' value='{{name1}}'> </input>
+  </view>
+  <view class='ht_item'>
+    <view class='ht_tit'>
+    </view>
+    <input type='text' placeholder='身份证号码' bindinput='get_card' value='{{card}}'> </input>
+  </view>
+  <view class='ht_item mt20'>
+    <view class='ht_tit'>
+      乙方：
+    </view>
+    新思维文化科技（广州）有限公司
+  </view>
+  <view class='all_txt'>
+    <rich-text nodes='{{data_.content}}'></rich-text>
+    <!-- <view>
+      <text>1.</text> 用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉。用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉，并沿桌子表面向四周扩散；
+    </view>
+
+    <view>
+      <text>2.</text> 用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉。用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉，并沿桌子表面向四周扩散；
+    </view>
+    <view>
+      <text>3.</text> 用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉。用一个白色透明的玻璃瓶子，将香烟的烟气吐入其中，放入冰箱冷冻，上课将玻璃瓶倒置在桌上，释放出来可见烟雾下沉，并沿桌子表面向四周扩散；
+    </view> -->
+  </view>
+  <view class='bottom_con'>
+    <view class='b_top'>
+      <view class='ht_item'>
+        <view class='ht_tit'>
+          甲方：
+        </view>
+        <input type='text' placeholder='姓名' bindinput='get_name2' value='{{name2}}'> </input>
+      </view>
+      <view class='ht_item mt10'>
+        <view class='ht_tit'>
+          日期
+        </view>
+        {{data_.time||time1}}
+      </view>
+    </view>
+    <view class='ht_item mt20'>
+      <view class='ht_tit'>
+        乙方：
+      </view>
+      新思维文化科技（广州）有限公司
+    </view>
+    <view class='ht_item mt10'>
+      <view class='ht_tit'>
+        日期
+      </view>
+      {{data_.time||time2}}
+    </view>
+  </view>
+</view>
+
+
+<view class='cheng'></view>
+<view class='fix_btn' bindtap='sub_mit'>提交</view>

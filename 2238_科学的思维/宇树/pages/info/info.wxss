@@ -1,0 +1,97 @@
+page{
+  background-color: #f7f7f7;
+}
+.form-tit{
+  height: 65rpx;
+  line-height: 65rpx;
+  padding: 0 25rpx;
+  font-size: 28rpx;
+  color: #8b8b8b;
+}
+.form_item input{
+  width: 100%;
+  background-color: #fff;
+  height: 80rpx;
+  font-size: 28rpx;
+}
+.inp_container{
+  padding: 0 25rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.lable_item{
+  float: left;
+  margin-right: 135rpx;
+}
+
+.lable_item text{
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+
+.wai_ {
+
+width:37rpx;
+height:37rpx;
+background-color:#F5F5F5;
+border:2.5rpx solid #CCC;
+-webkit-border-radius:50%;
+border-radius:50%;
+vertical-align:middle;
+position: relative;
+display: inline-block;
+
+}
+.cur{
+   border-color: #febd00!important;
+    background-color: #febd00!important;
+}
+.guo_{
+    position: absolute;
+     left: 8rpx; 
+     top: 10rpx; 
+    width: 20rpx;
+    height: 10rpx;
+    border-left: 4rpx solid #fff;
+    border-bottom: 4rpx solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    display: none;
+    transform: rotate(-45deg);
+}
+.cur .guo_{
+  display: block;
+  }
+
+
+.bkh{
+  background-color: #f7f7f7;
+}
+
+
+.fix_btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #febd00;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<view class='banner'>
+  <swiper autoplay='{{true}}' indicator-dots='{{true}}' indicator-color='rgba(255,255,255,.4)' indicator-active-color='#fff'>
+    <swiper-item wx:for="{{data_.imgs}}">
+      <image src='{{url+item}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class='goods_top'>
+  <view class='goods_tit'>{{data_.title}}</view>
+  <view class='info_item'>
+    作者：{{data_.writer}}
+  </view>
+
+  <view class='goods_price'>￥{{data_.price}}</view>
+  <view class='fu'>
+    <view class='fu_item' bindtap='tog_sc'>
+      <button hover-class="none">
+        <image src='{{is_sc==true?"/images/starl_03.png":"/images/starx_03.png"}}'></image>
+        <view>收藏</view>
+      </button>
+    </view>
+  </view>
+</view>
+
+<view class='detail_box'>
+  <view class='detail_tit'>书籍详情</view>
+  <view class='detail_content'>
+    <rich-text nodes='{{data_.content}}'></rich-text>
+  </view>
+</view>
+
+
+
+
+<view class='cheng'></view>
+<view class='fix_btn'>
+  <view bindtap='buy_'>立即购买</view>
+  <view bindtap='add_car'>加入购物车</view>
+</view>

@@ -1,0 +1,26 @@
+<view class='index_box'>
+  <view class='index_item' wx:for='{{list_}}'>
+    <navigator url='../kc_record_detail/kc_record_detail?id={{item.id}}'>
+      <view class='index_left'>
+        <image src='{{url+item.pic}}'></image>
+      </view>
+      <view class='index_right'>
+        <view class='goods_tit'>
+          {{item.title}}
+        </view>
+        <view class='goods_info'>
+          <view>地点：{{item.you_addr}}</view>
+        </view>
+        <view class='goods_price'>￥{{item.total}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+
+
+ <view class='kong_' wx:if="{{list_.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>您还没有相关的记录</view>
+  </view>

@@ -1,0 +1,23 @@
+<view class='index_item' wx:for='{{list_}}' wx:key="{{index}}">
+  <navigator url='../active_review_detail/active_review_detail?id={{item.id}}'>
+    <view class='index_left'>
+      <image src='{{url+item.pic}}'></image>
+    </view>
+    <view class='index_right'>
+      <view class='goods_tit'>
+        {{item.title}}
+      </view>
+      <view class='goods_info'>
+        <view>时间：{{item.retime}}</view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view class='kong_' wx:if="{{list_.length<=0}}">
+  <image src='../../images/kong.png'></image>
+  <view>还没有相关的活动回顾</view>
+</view>
+
+
+
+<view class='cheng'></view>

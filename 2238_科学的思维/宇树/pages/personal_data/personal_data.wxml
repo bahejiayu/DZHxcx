@@ -1,0 +1,12 @@
+<view class='jo_box'>
+  <view class='jo_item'>
+    <navigator url='../information/information?t=1'> 个人资料
+      <image src='/images/adr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='jo_item'>
+    <navigator url='../address_list/address_list'> 收货地址
+      <image src='/images/adr_03.png'></image>
+    </navigator>
+  </view>
+</view>

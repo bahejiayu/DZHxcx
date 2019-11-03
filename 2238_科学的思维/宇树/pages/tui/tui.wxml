@@ -1,0 +1,71 @@
+<view class='index_item'>
+  <navigator>
+    <view class='index_left'>
+      <image src='{{url+data_.pic}}'></image>
+    </view>
+    <view class='index_right'>
+      <view class='goods_tit'>
+        {{data_.title}}
+      </view>
+    </view>
+  </navigator>
+</view>
+<view class='all_form'>
+  <view class='item_lable' bindtap='t_type'>
+      <view>售后类型</view>
+      <view>
+           <text  class='type_=="请选择"?"dh":" " ' >{{type_}}</text><image src='/images/adr_03.png'></image>
+      </view>
+  </view>
+    <view class='item_lable' bindtap='t_yy'>
+      <view>申请原因</view>
+      <view>
+           <text  class='yy_=="请选择"?"dh":" " '>{{yy_}}</text> <image src='/images/adr_03.png'></image>
+      </view>
+  </view>
+</view>
+
+<view class='all_area'>
+  <text>申请说明：</text>
+  <textarea placeholder='请输入申请说明' bindinput='get_sm'></textarea>
+</view>
+
+<view class='up_box'>
+    <view class='up_tit'>
+      上传图片
+    </view>
+  <view class='con'>
+
+  <view class='list_img'>
+    <image wx:for='{{hand_card}}' src='{{url+"/"+item}}'>
+      <view data-index='{{index}}' bindtap='del_card'>删除</view>
+    </image>
+  </view>
+  <view>
+    <image src='/images/baiban_03.jpg' bindtap='up_card' wx:if='{{hand_card.length!=1}}'></image>
+  </view>
+</view>
+    <view class='up_tip'>提示：请上传一张有快递员在场的拆快递凭证。</view>
+</view>
+<view class='cheng'></view>
+<view class='fix_btn' bindtap='sub_mit' >提交</view>
+
+
+<!-- <view class='zz'></view>
+<view class=''></view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

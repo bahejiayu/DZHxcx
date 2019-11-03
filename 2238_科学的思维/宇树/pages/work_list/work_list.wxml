@@ -1,0 +1,16 @@
+<view class='jo_box'>
+  <view class='jo_item' wx:for='{{work_list}}'>
+    <navigator url='{{item.is_answer==0?"../work/work?id="+item.id+"&gid="+item.order_id:"../work_submit/work_submit?id="+item.id+"&gid="+item.order_id}}'>
+      {{item.title}}
+      <image src='/images/adr_03.png'></image>
+    </navigator>
+  </view>
+</view>
+
+<!-- <view class='cheng'></view>
+<view class='fix_btn'>写日志</view> -->
+
+ <view class='kong_' wx:if="{{work_list.length<=0}}">
+      <image src='../../images/kong.png'></image>
+      <view>该课程下还没有作业</view>
+  </view>

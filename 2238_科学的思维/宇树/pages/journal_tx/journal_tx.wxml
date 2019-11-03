@@ -1,0 +1,19 @@
+<view class='tit_'>标题</view>
+<view class='inp_'>
+  <input type='text' placeholder='请输入时间+标题，如：20180927标题标题' bindinput='get_title'></input>
+</view>
+<view class='tit_'>内容</view>
+<textarea placeholder='请输入内容' bindinput='get_area'></textarea>
+<view class='tit_'>内容</view>
+<view class='con'>
+
+  <view class='list_img'>
+    <image wx:for='{{hand_card}}' src='{{url+"/"+item}}'>
+      <view data-index='{{index}}' bindtap='del_card'>删除</view>
+    </image>
+  </view>
+  <view>
+    <image src='/images/baiban_03.jpg' bindtap='up_card'></image>
+  </view>
+</view>
+<view class='fix_btn' bindtap='sub_mit'>发布</view>

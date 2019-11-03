@@ -1,0 +1,125 @@
+<view class='head'>
+  <image src='{{count_==0?"/images/comment_03.png":"/images/a.png"}}  ' class='comment_' bindtap='go_mess'></image>
+  <button open-type='getUserInfo' bindgetuserinfo="login_" wx:if="{{is_login==false}}">
+    <view>
+      <image src='/images/head_img_03.jpg' class='t_e'></image>
+      <view class='name'>请登陆</view>
+    </view>
+  </button>
+  <button wx:if="{{is_login}}">
+    <view>
+      <image src='{{user_info.headimage}}' class='t_e'></image>
+      <view class='name'>{{user_info.name||user_info.nickname}}</view>
+      <view class='name' wx:if='{{number_}}'>会员号：{{number_}}</view>
+    </view>
+  </button>
+</view>
+
+
+<view class='item_all'>
+  <view class='item'>
+    <navigator url='../result_list/result_list?record_id={{record_id}}' hover-class="none">
+      <view>思维测评</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../my_pan/my_pan' hover-class="none">
+      <view>我的沙盘</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../order_kc/order_kc' hover-class="none">
+      <view>专项课程</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../order_book/order_book' hover-class="none">
+      <view>书籍订单</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../kc_record/kc_record' hover-class="none">
+      <view>游学记录</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../order_active/order_active' hover-class="none">
+      <view>线下活动</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../journal/journal' hover-class="none">
+      <view>个人日志</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../my_collect/my_collect' hover-class="none">
+      <view>我的收藏</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../personal_data/personal_data' hover-class="none">
+      <view>个人资料</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../about_us/about_us' hover-class="none">
+      <view>关于企业</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='{{fx_url}}' hover-class="none">
+      <view>分销商</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+</view>
+
+<view class='cheng'></view>
+<view class='fixed_bottom'>
+  <view class='fixed_item '>
+    <navigator url='../index/index' open-type='reLaunch'>
+      <image src='/images/p1_03.png' class='f'></image>
+      <image src='/images/c1.png' class='n'></image>
+      <view>首页</view>
+    </navigator>
+  </view>
+  <view class='fixed_item'>
+    <navigator url='../shopcar/shopcar' open-type='reLaunch'>
+      <image src='/images/p2_03.png' class='f'></image>
+      <image src='/images/c2.png' class='n'></image>
+      <view>购买项</view>
+    </navigator>
+  </view>
+  <view class='fixed_item '>
+    <navigator url='../active/active' open-type='reLaunch'>
+      <button open-type='contact'>
+        <image src='/images/p3_03.png' class='f'></image>
+        <image src='/images/c3.png' class='n'></image>
+        <view>客服</view>
+      </button>
+    </navigator>
+  </view>
+  <view class='fixed_item cur'>
+    <navigator url='../follow/follow' open-type='reLaunch'>
+      <image src='/images/p4_03.png' class='f'></image>
+      <image src='/images/c4.png' class='n'></image>
+      <view>个人中心</view>
+    </navigator>
+  </view>
+
+
+
+
+</view>
+<!-- </view> -->

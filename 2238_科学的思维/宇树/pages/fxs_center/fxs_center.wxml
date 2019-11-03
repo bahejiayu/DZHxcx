@@ -1,0 +1,62 @@
+<view class='head'>
+
+  <button open-type='getUserInfo' bindgetuserinfo="login_">
+    <view>
+      <image src='{{user_data.headimage}}' class='t_e'></image>
+      <view class='name'>{{user_data.name||user_data.nickname}}</view>
+      <view class='name'>级别：一级代理</view>
+    </view>
+  </button>
+
+  <!-- <view wx:if='{{is_login}}' style='text-align:center;'>
+    <image src='{{user_info.img}}' class='t_e'></image>
+    <view class='name'>{{user_info.name}}</view>
+  </view> -->
+
+
+
+
+
+
+
+
+</view>
+
+
+<view class='item_all'>
+  <view class='item'>
+    <navigator url='../my_group/my_group' hover-class="none">
+      <view>我的团队</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../my_account/my_account' hover-class="none">
+      <view>我的账户</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../get_record/get_record' hover-class="none">
+      <view>提现记录</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../order_fx/order_fx' hover-class="none">
+      <view>分销订单</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../fx_code/fx_code' hover-class="none">
+      <view>推广二维码</view>
+      <image src='../../images/dr_03.png'></image>
+    </navigator>
+  </view>
+
+</view>
+
+<view class='cheng'></view>
+
+<!-- </view> -->
